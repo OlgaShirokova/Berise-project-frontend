@@ -1,0 +1,43 @@
+.container {
+  text-align: center;
+  background-color: #FCFDFE;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #FCFDFE;
+  height: 180px;
+  padding: 20px;
+  color: #FA4032;
+  font-size: 140%;
+  box-shadow: 1px 1px 1px 1px rgba(193, 193, 193, 0.50);
+}
+
+.intro {
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
+  color: rgb(48, 47, 46);
+  background-color: #FCFDFE;
+}
+
+img {
+  width: 200px;
+}
+
+.images{
+  margin-top: 40px;
+}
+
+button {
+  background-color: white;
+  border: none;
+  font-size: 70%;
+  width: 120px;
+  height: 50px;
+  box-shadow: 1px 1px 1px 1px grey;
+}
