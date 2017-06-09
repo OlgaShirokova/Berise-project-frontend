@@ -1,0 +1,53 @@
+.container {
+  text-align: center;
+  background-color: #FCFDFE;
+  display: flex;
+  flex-direction: column;
+}
+
+.try-berise {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
+  color: rgb(48, 47, 46);
+  background-color: #FCFDFE;
+}
+
+img {
+  width: 200px;
+}
+
+.images {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.first-image {
+  margin-left: 150px;
+}
+
+.fifth-image {
+  margin-right: 120px;
+}
+
+.how-it-works {
+  margin: 50px;
+}
+
+.reviews-p {
+  display: flex;
+  flex-direction: row;
+}
+
+.reviews p {
+  margin: 50px;
+}
