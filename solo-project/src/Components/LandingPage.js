@@ -33,7 +33,7 @@ export class LandingPage extends Component {
             <img src='https://www.jnjcolombia.com/sites/default/files/content-images/marca_ob/product-selector/assets/img/procomfort-mini.png'/>
           </div>
           <div className="third-image">
-            <img src={require('../images/soft.png')}/>
+            <img src={require('../visuals/soft.png')}/>
           </div>
           <div className="fourth-image">
             <img src='https://www.carethy.lu/media/4/photos/products/034109/34109-081_1_g.jpg'/>

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import ProductPage from './Components/ProductPage.js';
 import { LandingPage } from './Components/LandingPage.js';
+import { OrderPage } from './Components/OrderPage.js';
 import { getProducts } from './actions';
 import { addToCart } from './actions';
 
@@ -12,6 +13,7 @@ import { addToCart } from './actions';
 class App extends Component {
 
   render() {
+    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!', this.props);
     return (
       <Router>
         <MuiThemeProvider>
@@ -30,6 +32,9 @@ class App extends Component {
             <Route exact={true} path="/" component={LandingPage} />
             <Route path='/products' render={() => (
               <ProductPage products={this.props.products} />
+            )} />
+            <Route path='/order' render={() => (
+              <OrderPage products={this.props.products} />
             )} />
 
           </div>

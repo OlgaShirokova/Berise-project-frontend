@@ -4,7 +4,8 @@ import './ProductPage.css';
 import { connect } from 'react-redux';
 import { getProducts } from '../actions';
 import { addToCart } from '../actions';
-import BadgeBasket from '../images/Badge.js';
+import BadgeBasket from '../visuals/Badge.js';
+import { BrowserRouter as Router, Link, Route} from 'react-router-dom';
 
 class ProductPage extends Component {
 
@@ -23,7 +24,9 @@ class ProductPage extends Component {
   render () {
     return (
       <div className="product-list-container">
-        <BadgeBasket />
+        <Link to = {'/order'}>
+          <BadgeBasket />
+        </Link>
         {this.renderProducts()}
       </div>
     );
