@@ -12,13 +12,11 @@ const reducer = (state = defaultState, action) => {
     return state
     break;
   case 'GET_PRODUCTS_SUCCESS':
-    return Object.assign({}, state, { products: state.products.concat(action.data) });
+    return Object.assign({}, state, { products: action.data});
   case 'GET_PRODUCTS_FAIL':
     return state;
     break;
   case 'ADD_TO_CART_SUCCESS':
-    console.log('--------', Object.keys(state.orders).map(sku => state.orders[parseInt(sku)]));
-    console.log('!!!!!!!', state.orders[action.productId]);
     const order = Object.keys(state.orders)
     .map(sku => state.orders[parseInt(sku)])
     .find(el => el.sku === action.productId)

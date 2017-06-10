@@ -14,11 +14,13 @@ class ProductPage extends Component {
   }
 
   renderProducts () {
-    return this.props.products
-    .map(element => {
+
+    return Object.keys(this.props.products).map(element => this.props.products[element]).map(element => {
       // console.log(element);
       return <Product productId={element.SKU} product={element} addToCart={this.props.addToCart}/>;
-    });
+    })
+
+
   }
 
   render () {
