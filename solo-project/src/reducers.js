@@ -17,26 +17,28 @@ const reducer = (state = defaultState, action) => {
     return state;
     break;
   case 'ADD_TO_CART_SUCCESS':
-    console.log('--------', Object.keys(state.orders).map(id => state.orders[parseInt(id)]));
+    console.log('--------', Object.keys(state.orders).map(sku => state.orders[parseInt(sku)]));
+    console.log('!!!!!!!', state.orders[action.productId]);
     const order = Object.keys(state.orders)
-    .map(id => state.orders[parseInt(id)])
-    .find(el => el.SKU === action.productId)
+    .map(sku => state.orders[parseInt(sku)])
+    .find(el => el.sku === action.productId)
 
     let newState;
     if(order) {
-      console.log('in order', state.orders[action.productId].quantity);
+      console.log('in order', state.orders);
       newState = Object.assign({}, state)
       newState.orders = Object.assign({}, state.orders, {
         [action.productId]: {
+          sku: action.productId,
           quantity: state.orders[action.productId].quantity+1
         }
       })
     }else{
-      console.log('too bad');
+      console.log('too bad', state.orders);
       newState = Object.assign({}, state)
       newState.orders = Object.assign({}, state.orders, {
         [action.productId]: {
-          SKU: action.productId,
+          sku: action.productId,
           quantity: 1
         }
       })
