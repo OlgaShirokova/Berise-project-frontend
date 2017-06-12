@@ -1,18 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Raleway');
+
+.admin-access {
+  font-size: 50%;
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+  color: #FA4032;
+}
+
 .general-container {
   text-align: center;
   background-color: #FCFDFE;
   display: flex;
   flex-direction: column;
+  font-family: Raleway;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   background-color: #FCFDFE;
-  height: 180px;
+  height: 220px;
   padding: 20px;
+  margin-bottom: 30px;
   color: #FA4032;
-  font-size: 140%;
+  font-size: 180%;
   box-shadow: 1px 1px 1px 1px rgba(193, 193, 193, 0.50);
+}
+
+.header a {
+  text-decoration: none;
+}
+
+h2 {
+  color: #FA4032;
+  font-family: Lobster;
+}
+
+.header p {
+  font-size: 70%;
+  font-weight: bold;
+}
+
+.app-bar {
+  background-color: #ff5a60;
+  color: white;
+  font-size: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.app-bar p {
+  color: white;
 }

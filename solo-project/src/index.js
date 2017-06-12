@@ -11,8 +11,8 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import logger from 'redux-logger';
 import apiMiddleware, { apiCall } from './apiMiddleware';
 
-
-const store = createStore(reducers, applyMiddleware(apiMiddleware, logger));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers(applyMiddleware(apiMiddleware, logger)));
 
 injectTapEventPlugin();
 

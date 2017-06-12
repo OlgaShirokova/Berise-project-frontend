@@ -15,8 +15,8 @@ export class Product extends Component {
         <img className="product-image" src={this.props.product.picture}/>
         <h2>{this.props.product.name}</h2>
         <RaisedButton
-          label={`(${this.props.product.price/100}) Add to cart`}
-          secondary={true}
+          label={`($${this.props.product.price/100}) Add to cart`}
+          backgroundColor='pink'
           style={style}
           onClick={() => this.props.addToCart(this.props.product.SKU)}
           />

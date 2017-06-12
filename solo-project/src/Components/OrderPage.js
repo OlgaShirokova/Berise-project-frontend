@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './OrderPage.css';
 import RaisedButton from 'material-ui/RaisedButton';
 import { addToCart } from '../actions';
+import { activateSubscription } from '../actions';
 import BadgeBasket from '../visuals/Badge.js';
 import { OrderItem } from './OrderItem';
 
@@ -41,14 +42,17 @@ export class OrderPage extends Component {
     console.log('OBBBBBJ  TO DISPLAY', Object.keys(this.props.products.orders).map(sku => this.props.products.orders[parseInt(sku)].quantity).map(element => this.props.products.products[element]));
 
     return (
-      <div>
+      <div className="order-container">
         <h2>Your shopping basket </h2>
-        {this.renderProducts()}
+        <div className="order-list">
+          {this.renderProducts()}
+        </div>
         <h4> Total: ${this.calculateTotal()} </h4>
         <RaisedButton
-          label={`Make the Order!`}
+          label={`Subscribe`}
           secondary={true}
           style={style}
+          onClick={() => this.props.activateSubscription()}
           />
       </div>
     );

@@ -1,4 +1,5 @@
 import { getProducts } from './actions';
+import { activateSubscription } from './actions';
 
 export const apiCall = Symbol('apiCall');
 
@@ -12,18 +13,32 @@ const createNewAction = (action, append) => {
 
 export default store => next => action => {
 
+  const defaultHeaders = {
+    'Content-Type': 'application/json'
+  }
+
   const callApi = action[apiCall];
   if (!callApi) return next(action);
 
-  let { method } = callApi;
+  const { body } = callApi;
+
+  // Getting the auth token from the state
+  const token = '93jwidn2i9ekdlsfo0iweiorwijf0ijfk2e2o09'
+  defaultHeaders.authorization = `Bearer ${token}`
+
+  let { method, headers } = callApi;
   method = method || 'GET';
 
   fetch(callApi.url, {
-    method
+    method,
+    headers: Object.assign({}, defaultHeaders, headers),
+    body
   })
-  .then(data =>
+  .then(data => {
+    console.log('DATA', data);
     // parse data
-    data.json()
+    return data.json().catch(() => ({}))
+  }
   )
   .then(data => {
     // dispatch success action

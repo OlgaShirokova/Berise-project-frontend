@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.try-berise p {
+  font-weight: bold;
+}
+
 .intro {
   margin-top: 20px;
   font-size: 22px;
@@ -33,6 +37,10 @@ img {
 
 .first-image {
   margin-left: 150px;
+}
+
+.second-image {
+  margin-top: 20px;
 }
 
 .fifth-image {

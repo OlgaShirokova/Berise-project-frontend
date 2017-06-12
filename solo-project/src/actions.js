@@ -16,3 +16,11 @@ export const addToCart = (productId) => ({
   },
   productId
 });
+
+export const activateSubscription = () => ({
+  type: 'ACTIVATE_SUBSCRIPTION',
+  [apiCall]: {
+    url: 'http://private-623b1-beraiseapi.apiary-mock.com/subscription',
+    method: 'POST'
+  }
+});

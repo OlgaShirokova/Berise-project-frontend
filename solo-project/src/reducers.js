@@ -1,9 +1,16 @@
 import { fetchProducts } from './apiMiddleware';
 
 const defaultState = {
+  user: {
+            "email": "donkey@kong.com",
+            "age": 23,
+            "auth_token": "93jwidn2i9ekdlsfo0iweiorwijf0ijfk2e2o09",
+            "staff": true
+        },
   products: [],
   orders: {},
-  authentication: {}
+  authentication: {},
+  subscription: {},
 }
 
 const reducer = (state = defaultState, action) => {
@@ -43,6 +50,13 @@ const reducer = (state = defaultState, action) => {
     }
     return newState
 
+    break;
+  case 'ACTIVATE_SUBSCRIPTION_SUCCESS':
+    newState = Object.assign({}, state)
+    newState.subscription = Object.assign({}, state.subscription, {
+      active: true
+    })
+    return newState
     break;
   default:
     return state;

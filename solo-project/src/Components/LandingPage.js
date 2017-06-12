@@ -18,7 +18,7 @@ export class LandingPage extends Component {
         <div className="try-berise">
           <p>Try Berise for free today!</p>
           <Link to = {'/admin'}>
-            <RaisedButton label="Try Now!" secondary={true} style={style} />
+            <RaisedButton label="Try Now!" backgroundColor='pink' style={style} />
           </Link>
         </div>
         <div className="intro">
@@ -43,7 +43,7 @@ export class LandingPage extends Component {
           </div>
         </div>
         <p>Discover all our products from all our brands!</p>
-        <Link to = {'/products'}><RaisedButton label="See All" secondary={true} style={style} /></Link>
+        <Link to = {'/products'}><RaisedButton label="See All" backgroundColor='pink' style={style} /></Link>
         <div className='how-it-works'>
           <h2>How it works?</h2>
           <p> You pick the products you prefer in thequntity you need, place a monthly order depending on your period with our assistance if needed and voila! Some days before your perios a small beautiful box will appear in front of your door! </p>
@@ -54,7 +54,7 @@ export class LandingPage extends Component {
             <p className='left-review'>"I totally love FitBerry!! Before my peiod was a bad experience, but now I can't wait for it to come!"</p>
             <p className='right-review'>"You guys are doing an amazing job! The product is great, the package amazing and the treats magical!"</p>
           </div>
-          <RaisedButton label="Get Started!" secondary={true} style={style} />
+          <RaisedButton label="Get Started!" backgroundColor='pink' style={style} />
         </div>
       </div>
     );
