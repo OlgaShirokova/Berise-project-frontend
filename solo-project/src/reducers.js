@@ -11,6 +11,7 @@ const defaultState = {
   orders: {},
   authentication: {},
   subscription: {},
+  subscriptions: {},
 }
 
 const reducer = (state = defaultState, action) => {
@@ -58,6 +59,8 @@ const reducer = (state = defaultState, action) => {
     })
     return newState
     break;
+  case 'GET_SUBSCRIPTIONS_SUCCESS':
+    return Object.assign({}, state, { subscriptions: action.data});
   default:
     return state;
   }

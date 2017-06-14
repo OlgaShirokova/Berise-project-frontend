@@ -14,13 +14,9 @@ const style = {
 export class OrderPage extends Component {
 
   renderProducts () {
-    console.log('TO SAVE', Object.keys(this.props.products.orders).map(element => this.props.products.products[parseInt(element)]));
-    console.log('PROOOOPs', this.props);
     return Object.keys(this.props.products.orders).map(element => {
-      console.log('ELEMEEEENT', element);
-      console.log('PRODUCT', this.props.products.products[parseInt(element)]);
-      console.log('ORDEEER', this.props.products.orders[parseInt(element)]);
-      return <OrderItem product={this.props.products.products[parseInt(element)]}
+      console.log('ELEMEEENT', element);
+      return <OrderItem key={element}  product={this.props.products.products[parseInt(element)]}
       order={this.props.products.orders[parseInt(element)]}
       />;
     })
@@ -33,27 +29,16 @@ export class OrderPage extends Component {
   }
 
   render () {
-    console.log('THE PROPS', this.props.products);
-    console.log('THE PROPS PROOODS', this.props.products.products);
-    console.log('????????', this.props.products.orders);
-    console.log('KEEEYS', Object.keys(this.props.products.orders));
-    console.log('PRODUCTS', this.props.products.products);
-    console.log('QUANTITY TO DISPLAY', Object.keys(this.props.products.orders).map(sku => this.props.products.orders[parseInt(sku)].quantity));
-    console.log('OBBBBBJ  TO DISPLAY', Object.keys(this.props.products.orders).map(sku => this.props.products.orders[parseInt(sku)].quantity).map(element => this.props.products.products[element]));
-
     return (
       <div className="order-container">
-        <h2>Your shopping basket </h2>
+        <h2>Your box </h2>
         <div className="order-list">
           {this.renderProducts()}
         </div>
-        <h4> Total: ${this.calculateTotal()} </h4>
-        <RaisedButton
+        <h3> Total: ${this.calculateTotal()} </h3>
+        <button
           label={`Subscribe`}
-          secondary={true}
-          style={style}
-          onClick={() => this.props.activateSubscription()}
-          />
+          onClick={() => this.props.activateSubscription()}>Subscribe</button>
       </div>
     );
   }

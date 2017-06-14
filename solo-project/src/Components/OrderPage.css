@@ -1,9 +1,24 @@
 .order-container {
-    
+  margin-top: 60px;
 }
 
 .order-list {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+button {
+  height: 40px;
+  width: 150px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid #FA4032;
+  color: #FA4032;
+  font-weight: bold;
+  font-size: 80%;
+  font-family: Raleway;
+  margin-bottom: 60px;
 }

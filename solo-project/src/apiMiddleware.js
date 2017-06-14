@@ -1,5 +1,6 @@
 import { getProducts } from './actions';
 import { activateSubscription } from './actions';
+import { getSubscriptions } from './actions';
 
 export const apiCall = Symbol('apiCall');
 
