@@ -7,6 +7,7 @@
 ## App Screenshots
 
 ![alt text](http://i.imgur.com/lLv9gdb.jpg "Landing Page 1")
+![alt text](http://i.imgur.com/fJgJq4d.png "Landing Page 2")
 
 ## Motivation
 
