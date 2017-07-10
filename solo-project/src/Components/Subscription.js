@@ -11,7 +11,6 @@ export class Subscription extends Component {
 
   renderOrders() {
     return (this.props.subscription.order).map(element => {
-      console.log(element);
       return (
         <div id='order-details'>
           <div style={{fontWeight:'bold'}} className='order-detail'>{element.name}:</div>

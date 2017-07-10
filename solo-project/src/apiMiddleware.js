@@ -36,7 +36,6 @@ export default store => next => action => {
     body
   })
   .then(data => {
-    console.log('DATA', data);
     // parse data
     return data.json().catch(() => ({}))
   }

@@ -9,7 +9,6 @@ const style = {
 export class OrderItem extends Component {
 
   render () {
-    console.log('ORDEEEERRRR', this.props);
     return (
       <div className="order-item-container">
         <div className="order-item">

@@ -31,7 +31,6 @@ const reducer = (state = defaultState, action) => {
 
     let newState;
     if(order) {
-      console.log('in order', state.orders);
       newState = Object.assign({}, state)
       newState.orders = Object.assign({}, state.orders, {
         [action.productId]: {
@@ -40,7 +39,6 @@ const reducer = (state = defaultState, action) => {
         }
       })
     }else{
-      console.log('too bad', state.orders);
       newState = Object.assign({}, state)
       newState.orders = Object.assign({}, state.orders, {
         [action.productId]: {

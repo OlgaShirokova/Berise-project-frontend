@@ -15,7 +15,6 @@ export class OrderPage extends Component {
 
   renderProducts () {
     return Object.keys(this.props.products.orders).map(element => {
-      console.log('ELEMEEENT', element);
       return <OrderItem key={element}  product={this.props.products.products[parseInt(element)]}
       order={this.props.products.orders[parseInt(element)]}
       />;

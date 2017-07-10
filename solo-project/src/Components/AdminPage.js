@@ -13,14 +13,12 @@ class AdminPage extends Component {
   renderSubscriptions () {
     if (this.props.subscriptions.subscriptions)
     return (this.props.subscriptions.subscriptions).map(element => {
-      console.log(element);
       return <Subscription key={element.sub_id} subscription={element}/>;
     })
 
   }
 
   render () {
-    console.log('SUBSCRIPTIONS', this.props.subscriptions.subscriptions);
     return (
       <div className="subscription-list-container">
         {this.renderSubscriptions()}
