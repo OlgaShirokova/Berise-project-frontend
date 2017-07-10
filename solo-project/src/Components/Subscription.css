@@ -1,0 +1,16 @@
+.subscription {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+#order-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.order-detail {
+  margin-left: 10px;
+  margin-right: 10px;
+}
